@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Uploaded</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>File Uploaded Successfully</h1>
+    <p class="success-message">Your file has been uploaded successfully!</p>
+    <p><strong>Filename:</strong> <%= file.filename %></p>
+    <p><strong>Filepath:</strong> <a href="<%= file.filepath %>"><%= file.filepath %></a></p>
+    <p><strong>File Type:</strong> <%= file.filetype %></p>
+    <p><strong>File Size:</strong> <%= (file.size / 1024).toFixed(2) %> KB</p>
+    <p><strong>Uploaded At:</strong> <%= file.uploadedAt.toLocaleString() %></p>
+    <a href="/">Upload Another File</a>
+  </div>
+</body>
+</html>
